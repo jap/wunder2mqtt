@@ -1,0 +1,10 @@
+max_age: 900
+wunderground_api_key: <INVALID>
+stations:
+ - pws:IDELFT9
+ - pws:IDELFT77
+ - NL/Delft
+mqtt:
+  host: mqtt
+  port: 1883
+  target: actions/otmonitor/outside

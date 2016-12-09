@@ -64,8 +64,9 @@ def main():
     with file("wunder2mqtt.yaml") as f:
         config = yaml.load(f.read())
 
-    temp = get_temp_from_wunderground(config) or 0
-    send_temp_to_mqtt(config, temp)
+    temp = get_temp_from_wunderground(config)
+    if temp is not None:
+        send_temp_to_mqtt(config, temp)
 
 
 if __name__ == '__main__':
